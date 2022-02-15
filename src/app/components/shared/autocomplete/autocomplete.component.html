@@ -1,0 +1,47 @@
+<form>
+  <mat-form-field color="primary">
+    <mat-label>Search Funds</mat-label>
+    <input type="text"
+      placeholder="Type here..."
+      aria-label="Funds"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async"
+        [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+<ng-select [items]="options" [multiple]="true"
+  groupBy="type"
+  bindLabel="name"
+  bindValue="id"
+  placeholder="Autocomplete Funds Clients"
+  [selectableGroup]="true"
+  [selectableGroupAsModel]="false"
+  [closeOnSelect]="false"
+  [(ngModel)]="selectedApplications">
+  <ng-template ng-optgroup-tmp
+    let-item="item"
+    let-item$="item$"
+    let-index="index">
+    <mat-checkbox id="item-{{index}}"
+      color="primary"
+      [ngModel]="item$.selected"
+      (click)="false">{{ item | uppercase }}</mat-checkbox>
+  </ng-template>
+  <ng-template ng-option-tmp
+    let-item="item"
+    let-item$="item$"
+    let-index="index">
+    <mat-checkbox id="item-{{index}}"
+      color="accent"
+      [ngModel]="item$.selected"
+      (click)="false">{{ item }}</mat-checkbox>
+  </ng-template>
+</ng-select>

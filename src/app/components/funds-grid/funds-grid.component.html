@@ -1,0 +1,74 @@
+<mat-card >
+  <div class="controls"
+    fxLayout
+    fxLayoutAlign="space-between center">
+    <app-date-range-picker></app-date-range-picker>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Quick filter" 
+        (keyup)="quickFilter($event)"
+        >
+    </mat-form-field>
+    <div class="action-buttons"
+      fxLayout
+      fxLayoutGap="20px">
+      <button mat-raised-button
+        color="accent">Action 1</button>
+      <button mat-raised-button
+        color="accent">Action 2</button>
+    </div>
+
+  </div>
+
+
+
+<app-autocomplete></app-autocomplete>
+
+  <mat-accordion>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header color="primary">
+        <mat-panel-title>
+          Momentum ag-Grid
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <div class="table"
+        style="min-height: 500px;">
+        <ag-grid-angular fxFlex
+          class="ag-theme-material"
+          [animateRows]="true"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          [rowData]="rowData"
+          (gridReady)="onGridReady($event)"
+          >
+        </ag-grid-angular>
+      </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header color="primary">
+        <mat-panel-title>
+          Momentum Exceptions </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      NO DATA
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header color="primary">
+        <mat-panel-title>
+          Momentum Ratings
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      NO DATA
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+
+
+
+
+</mat-card>

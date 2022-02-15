@@ -1,0 +1,16 @@
+@import '../../../../assets/variables';
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-select.ng-select-focused
+  .ng-select-container
+  .ng-value-container
+  .ng-placeholder {
+  color: $accent !important;
+}
+
+.ng-select.ng-select-multiple
+  .ng-select-container
+  .ng-value-container
+  .ng-value {
+  background-color: $accent;
+}

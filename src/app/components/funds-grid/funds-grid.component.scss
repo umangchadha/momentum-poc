@@ -1,0 +1,32 @@
+@import '../../../assets/variables';
+
+.mat-expansion-panel {
+  margin-bottom: 5px !important;
+
+  .mat-expansion-panel-header,
+  .mat-expansion-panel-header.mat-expanded {
+    background-color: $primary !important;
+    height: 45px;
+
+    * {
+      color: white !important;
+    }
+  }
+
+  .mat-expansion-panel-header:hover {
+    background-color: $accent !important;
+  }
+
+  .mat-expansion-indicator::after {
+    color: white;
+  }
+
+  mat-panel-title {
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0;
+  }
+}

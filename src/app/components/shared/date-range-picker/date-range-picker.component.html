@@ -1,0 +1,14 @@
+<mat-form-field floatLabel="never">    
+  <input matInput
+    placeholder="Select Date Range..."
+    ngxDaterangepickerMd
+    [(ngModel)]="selected"
+    [showCustomRangeLabel]="true"
+    [alwaysShowCalendars]="true"
+    [ranges]="ranges"
+    [linkedCalendars]="true"
+    
+    [showClearButton]="true">
+    <mat-icon class="range-icon">date_range</mat-icon>
+</mat-form-field>
+   

@@ -1,0 +1,60 @@
+@import 'theme';
+@import 'assets/variables';
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-material.css';
+
+html,
+body {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.action-buttons button,
+.md-drppicker .buttons button.btn:not(.clear) {
+  padding: 0px 26px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  width: 116px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.md-drppicker {
+  min-width: 700px;
+}
+
+.md-drppicker .buttons button.btn:not(.clear) {
+  background-color: $accent !important;
+}
+
+.md-drppicker .ranges ul li button.active {
+  background-color: $accent !important;
+}
+
+.md-drppicker td.active,
+.md-drppicker td.active:hover {
+  background-color: $accent !important;
+}
+
+.md-drppicker .clear svg {
+  opacity: 0;
+}
+
+.table-links {
+  color: $accent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ag-cell-value {
+  color: #999;
+}
+
+.ag-header-cell-text {
+  color: #000;
+}

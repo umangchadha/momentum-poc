@@ -1,0 +1,37 @@
+<mat-drawer-container class="full-height mat-typography primary-color drawer-container"
+  autosize>
+  <mat-drawer #drawer
+    mode="side"
+    disableClose="true"
+    opened="true"
+    class="primary-color">
+
+    <a [fxLayoutAlign]="isExpanded? 'end center' : 'center center'"
+      (click)="isExpanded = !isExpanded"
+      style="cursor:pointer">
+      <mat-icon aria-label="arrow right"
+        *ngIf="!isExpanded">chevron_right</mat-icon>
+      <mat-icon aria-label="arrow left"
+        *ngIf="isExpanded">chevron_left</mat-icon>
+    </a>
+
+    <mat-nav-list>
+
+      <mat-list-item *ngFor="let item of naviList"  [routerLinkActive]="['accent-color']">
+        <a [routerLink]="item.link"
+         
+          fxLayout
+          fxLayoutAlign="space-between center"
+          fxLayoutGap="10px">
+          <mat-icon mat-list-icon>{{item.icon}}</mat-icon>
+          <div mat-line
+            *ngIf="isExpanded" class="drawer-labels">{{item.label}}</div>
+        </a>
+      </mat-list-item>
+
+    </mat-nav-list>
+
+
+  </mat-drawer>
+
+</mat-drawer-container>
